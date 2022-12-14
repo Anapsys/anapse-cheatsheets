@@ -14,6 +14,7 @@ var reassignedValue = "...each time you declare it.";
 
     // data structures
     let arrayAnimals = ['cat', 'dog', 'ferret'];
+    let arraySpreadCopy = [...arrayAnimals]; // use the spread syntax to get each element of a list
     const BEST_ANIMAL = arrayAnimals[2];
     arrayAnimals.push('pine marten');
     let takenAnimal = arrayAnimals.pop(); //removes and returns
@@ -23,7 +24,10 @@ var reassignedValue = "...each time you declare it.";
     let objectPerson = {name: "Derek", 
                         age: 13, 
                         job: 'Hobgoblin knob slobberer',
+                        nestedObject: {age: 666, type: "demon blade"},
                         "multitoken property name": "why is this a f e a t u r e"};
+        const { name: desName, age: desAge } = objectPerson; //destructuring syntax: assign multiple properties to their own vars
+        const { name, age } = objectPerson; //the same, but without assigning new var names
         let ageValue = objectPerson.age;
         let dumbValue = objectPerson["multitoken property name"]; //spaces mean you must use bracket notation
         delete objectPerson.job;
@@ -37,6 +41,22 @@ var reassignedValue = "...each time you declare it.";
         //this kind of decalaration is used for... actually this seems kinda dumb
         //used for declaring a limited function, for instance, within an argument
     };
+    const serverRequest = new Promise((resolve, reject) => {
+        //TODO: this doesnt work
+        let condition;
+        setTimeout(() => {
+            condition = true;
+        }, 9000);
+
+        if (condition) resolve("Fulfill message");
+        else reject("Failed message");
+    }).then(result => {
+        //work with the data passed in resolve
+        console.log(result);
+    }).catch(error => {
+        //work with the data passed in reject
+        console.warn(error);
+    })
 
 // FUNCTION CALLS
 myFunc(PI, PI);
