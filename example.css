@@ -13,3 +13,16 @@
 p {
     font-family: monospace;
 }
+
+a {
+    border: 1px solid black;
+}
+
+.gridRow {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: dashed;
+    padding: 3px;
+}
