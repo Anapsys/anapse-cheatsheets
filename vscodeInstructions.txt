@@ -1,0 +1,9 @@
+tabs vs. spaces:
+	search preferences for properties tabs, autodetect spaces
+to run a single file:
+	<-- debug tab
+	select worker
+	open debug console tab in terminal v
+	play button
+
+	or ctrl+alt+n
