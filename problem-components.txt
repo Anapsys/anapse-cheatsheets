@@ -1,0 +1,4 @@
+return n elements		.slice()
+string... anything		.split('') .join('')
+speed					memoization
+						
